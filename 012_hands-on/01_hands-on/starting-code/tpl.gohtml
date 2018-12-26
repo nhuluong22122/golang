@@ -8,9 +8,15 @@
 
 {{range .}}
 
-<!-- PUT YOUR CODE HERE TO SHOW THE DATA-->
-
+<h2>{{ .AcaYear }} </h2>
+<h5>{{ .Fall.Term }}</h5>
+    {{ range .Fall.Courses }}
+       <li> Number: {{.Number}} | Name: {{.Name}} | Units: {{.Units}} </li>
+    {{end}}
+<h5>{{ .Spring.Term }}</h5>
+    {{ range .Spring.Courses }}
+        <li> Number: {{.Number}} | Name: {{.Name}} | Units: {{.Units}}  </li>
+    {{end}}
 {{end}}
-
 </body>
 </html>
